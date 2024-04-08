@@ -1,0 +1,4 @@
+---
+# vars file for player
+secret: banana
+mark_v: "{{ secret | my_namespace.my_collection.all_is_mark }}"

@@ -1,0 +1,23 @@
+---
+# tasks file for player
+- name: Role_play1
+  ansible.builtin.ping:
+- name: Role_play2
+  debug: 
+    msg: "{{ secret }}"
+- name: Role_play3
+  debug: 
+    msg: "{{ keyman }}"
+- name: Role_play4
+  shell: echo "Found God"
+  when: keyman == "god"
+  notify: restart
+- name: Role_play5
+  command: echo "CAT"
+  register: name
+- name: Role_play6
+  debug:
+    msg: "{{ name }}"
+- name: Role_play7
+  debug:
+    msg: "{{ mark_v }}"

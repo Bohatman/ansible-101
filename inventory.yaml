@@ -1,0 +1,24 @@
+myhosts:
+  vars:
+    # Group variable
+    secret: apple
+    ansible_user: bohat
+  hosts:
+    my_mac:
+      # Host variable
+      keyman: god
+      http_port: 80
+      ansible_host: 192.168.1.43
+    my_mac2:
+      # Host variable
+      http_port: 80
+      ansible_host: 192.168.1.43
+
+
+my_metagroupname:
+  children:
+    myhosts:
+
+kstream:
+  hosts:
+    sth.kstream[06:08]

@@ -1,0 +1,6 @@
+---
+- name: Play1
+  hosts: myhosts
+  tasks:
+    - import_role:
+        name: player
